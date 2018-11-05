@@ -2,6 +2,8 @@ import requests
 r=requests.get('https://www.vox.com/2018/9/25/17901082/trump-un-2018-speech-full-text')
 data=str(r.text)
 data=data[91972:117325]
+data=data.replace('’s ',' ')
+data=data.replace("'s "," '")
 data=data.replace(',',' ')
 data=data.replace('"',' ')
 data=data.replace("'"," ")
@@ -21,8 +23,6 @@ data=data.replace('</p>',' ')
 data=data.replace('<p',' ')
 data=data.replace('id=',' ')
 data=data.replace('>',' ')
-data=data.replace('’s ',' ')
-data=data.replace("'s "," '")
 data=data.lower()
 
 
